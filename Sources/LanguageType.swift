@@ -22,6 +22,7 @@ enum BaseType: Int {
 public enum Language: String {
   case swift
   case objc
+  case kotlin
 
   var fileExtension: String {
     switch self {
@@ -29,6 +30,8 @@ public enum Language: String {
       return ".swift"
     case .objc:
       return ".m"
+    case .kotlin:
+      return ".kt"
     }
   }
 }
@@ -81,6 +84,38 @@ enum ObjcType: String, LanguageType {
   case date = "NSDate *"
 
   static func match(baseType: BaseType) -> ObjcType {
+    switch baseType {
+    case .dictionary:
+      return .dictionary
+    case .array:
+      return .array
+    case .string:
+      return .string
+    case .integer:
+      return .integer
+    case .float:
+      return .float
+    case .boolean:
+      return .boolean
+    case .uri:
+      return .uri
+    case .date:
+      return .date
+    }
+  }
+}
+
+enum KotlinType: String, LanguageType {
+  case dictionary = "Map<String, %@>"
+  case array = "Array<%@>]"
+  case string = "String"
+  case integer = "Int"
+  case float = "Float"
+  case boolean = "Boolean"
+  case uri = "Uri"
+  case date = "Date"
+  
+  static func match(baseType: BaseType) -> SwiftType {
     switch baseType {
     case .dictionary:
       return .dictionary
