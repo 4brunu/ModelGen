@@ -34,8 +34,10 @@ public class SchemaProperty {
   let ref: String?
   let items: SchemaProperty?
   let additionalProperties: SchemaProperty?
-
+  
+  
   init(dictionary: [String: Any]) throws {
+    self.package = dictionary["package"] as? String
     self.type = dictionary["type"] as? String
     self.description = dictionary["description"] as? String
     self.format = dictionary["format"] as? String

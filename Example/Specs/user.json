@@ -4,7 +4,7 @@
   "description": "Definition of a User",
   "identifier": "id",
   "properties": {
-    "id": {"type": "integer"},
+    "id": {"type": "integer", "doc": "yooo"},
     "full_name": {"type": "string"},
     "email": {"type": "string"},
     "timezone": {"type": "string"},

@@ -97,6 +97,38 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
+            argument = "--spec"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/brunocoelho/Developer/ModelGen/Example/Specs/user.json"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--template"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/brunocoelho/Developer/ModelGen/Example/DataClass/template.stencil"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--language"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "kotlin"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--output"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/brunocoelho/Developer/ModelGen/Example/DataClass/Model "
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "colors -t swift3 $(PROJECT_DIR)/Resources/Fixtures/Colors/colors.xml"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -118,7 +150,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "templates list"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

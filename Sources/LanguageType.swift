@@ -107,7 +107,7 @@ enum ObjcType: String, LanguageType {
 
 enum KotlinType: String, LanguageType {
   case dictionary = "Map<String, %@>"
-  case array = "Array<%@>]"
+  case array = "Array<%@>"
   case string = "String"
   case integer = "Int"
   case float = "Float"
@@ -115,7 +115,7 @@ enum KotlinType: String, LanguageType {
   case uri = "Uri"
   case date = "Date"
   
-  static func match(baseType: BaseType) -> SwiftType {
+  static func match(baseType: BaseType) -> KotlinType {
     switch baseType {
     case .dictionary:
       return .dictionary
